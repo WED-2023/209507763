@@ -59,7 +59,6 @@ nav a {
 /*-------------- ABOUT --------------*/
 
 #about{
-	/*margin-top: 120px;     !* space below fixed navbar *!*/
 	position: relative;
 	background-image: url("img/about_BG.png");
 	background-size: cover;
@@ -97,13 +96,16 @@ nav a {
 /*-------------- MY PHOTOS --------------*/
 
 #photos {
+
 	background-color: #E4EDE2;
+
 }
 
 .gallery-wrapper {
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+
 }
 
 
@@ -141,8 +143,6 @@ nav a {
 /*-------------- PLAYLIST --------------*/
 #playlist {
 	background-color: #E4EDE2;
-	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* soft 3D shadow */
-	transition: background-color 0.2s, color 0.2s;
 }
 
 iframe {
@@ -160,10 +160,104 @@ iframe {
 }
 
 /*-------------- LIKE AND QR --------------*/
+#like-and-QR {
+	background-color: #E4EDE2;
+	transition: background-color 0.2s, color 0.2s;
+}
+.like-qr-title{
+	left: 30%;
+}
+
+.like-and-QR-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+	transition: background-color 0.2s, color 0.2s;
+	border-radius: 12px;
+	align-items: center;
+	gap: 40px; /* Adjust the value for the desired gap */
+}
+
+/*-------------- Q&A --------------*/
+#spa{
+	background-color: #F5E9D4;
+}
+.spa-title {
+	left: 48%;
+}
+table {
+	width: 100%;
+	text-align: left;
+	font-weight: bold;
+	font-size: 18px;
 
 
+}
 
+th, td {
+	padding: 12px;
+	border: 1px solid #ccc;
+}
 
+/*-------------- CONTACT --------------*/
+#contact{
+	background-color: #F5E9D4;
+}
+
+.emoji-btn {
+	font-size: 24px;
+	padding: 6px 10px;
+	margin: 4px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	transition: transform 0.2s;
+}
+
+.emoji-btn:hover {
+	transform: scale(1.2);
+}
+
+.form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 85%;
+	height: 40px;
+	padding: 10px;      /* spacing inside the box */
+	font-size: 16px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+/* Bigger textarea */
+textarea {
+	height: 150px;
+	resize: vertical; /* user can resize it up/down */
+}
+
+button[type="submit"] {
+	font-size: 16px;
+	padding: 12px 24px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 8px;
+	background-color: #4CAF50;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
 
 
 

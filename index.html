@@ -119,100 +119,105 @@
 
 </section>
 
- <div class="like-and-QR">
+
     <section id="like-and-QR" class="section">
-        <h1>Like Me</h1>
-        <div class="fb-like" data-href="https://www.facebook.com/i.love.dogs.in" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+        <h1 class="like-qr-title">Like Me Or Scan The Code</h1>
+        <div class="like-and-QR-container">
+            <div class="fb-like" data-href="https://www.facebook.com/i.love.dogs.in" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
+            <img src="img/qr-code.png" alt="qr-code" />
 
-        <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    give me a like
-    <br/>
-    <br/>
-    <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
     </section>
 
-    <section id="qrcoder" class="section">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    scan my code
-    <br/>
-    <br/>
-    <br/>
-    </section>
-</div>
+
+
 <section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
+    <h1 class="spa-title">Q&A</h1>
+    <br/>
+    <br/>
+
+    <br/>
+    <br/>
+    <br/>
+    <table border="1" class="QA-table">
+        <thead>
+        <tr>
+            <th>Web 1.0</th>
+            <th>Web 2.0</th>
+            <th>Web 3.0</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Static content, read-only websites. Users can view information but can't interact or contribute.</td>
+            <td>Interactive web, user-generated content. Social media, blogs, and platforms that rely on user participation.</td>
+            <td>Decentralized, blockchain-based web. Ownership, smart contracts, and data controlled by users.</td>
+        </tr>
+        <tr>
+            <td>A static site that displays medicine information, including usage and possible side effects. Users can only read, no interaction.</td>
+            <td>A website where users can read about the medicine and leave comments or reviews describing their personal experiences with side effects.</td>
+            <td>A decentralized health platform where users control their medical data and securely share feedback or side effect reports on the blockchain, possibly earning tokens for verified contributions.</td>
+        </tr>
+        </tbody>
+    </table>
+
+
 </section>
 
 <section id="contact" class="section">
+    <h1 class="contact-title">Contact Us</h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <form class="form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" />
+
+        <label for="message">Message Content:</label>
+        <textarea id="message" name="message" rows="5" cols="40"></textarea>
+
+        <div id="emoji-buttons">
+            <label>Select Emoji if you'd like to:</label><br />
+            <button type="button" class="emoji-btn">😃</button>
+            <button type="button" class="emoji-btn">😢</button>
+            <button type="button" class="emoji-btn">😠</button>
+            <button type="button" class="emoji-btn">😍</button>
+            <button type="button" class="emoji-btn">😎</button>
+        </div>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+
+
 </section>
 
 
@@ -231,6 +236,18 @@ $(function(){
  </script>
 
  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"></script>
+
+ <script>
+     const messageBox = document.getElementById('message');
+     const emojiButtons = document.querySelectorAll('.emoji-btn');
+
+     emojiButtons.forEach(btn => {
+         btn.addEventListener('click', () => {
+             messageBox.value += btn.textContent + ' ';
+         });
+     });
+ </script>
+
 
 </body>
 </html>
