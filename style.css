@@ -90,7 +90,9 @@ nav a {
 	top: 20%;
 	left: 23%;
 	width: 36%;
+	height: 60%;
 	color: #3B3B3B;
+	overflow-y: auto;
 	line-height: 1.6;
 	padding: 20px;
 }
